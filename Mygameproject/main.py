@@ -85,6 +85,12 @@ for i in range(st.enemy_num[0]): #创建敌人
 然后以文档路径的方式导进来即可
 
 或在设置文字font时把None(默认)改成中文'simsunnsimsun'
+
+<<<<<<< HEAD
+创建一个 pull request my baby
+=======
+我想 pull request 一下
+>>>>>>> 4fc510bae465407d969d8a2fb8c37dd37678843d
 """
 #三个界面
 bg1 = begin.Beginpage('gameproject\\images\\bg1.jpg',screen)  # 开始界面背景
