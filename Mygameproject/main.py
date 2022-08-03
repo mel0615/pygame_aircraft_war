@@ -19,7 +19,7 @@ s.play()
 """
 #初始化背景音乐
 pygame.mixer.init()
-pygame.mixer.music.load('gameproject/media/glory.mp3')
+pygame.mixer.music.load('./gameproject/media/glory.mp3')
 pygame.mixer.music.play(-1) #第一个参数-1为循环播放
 
 """
@@ -44,7 +44,7 @@ else:
 
 """
 加载图片(火箭)
-img=pygame.image.load('gameproject\\images\\rocket.png')
+img=pygame.image.load('./gameproject/images/rocket.png')
 
 火箭单独形成一个类
 屏幕绘图在火箭类里
@@ -52,7 +52,7 @@ img=pygame.image.load('gameproject\\images\\rocket.png')
 """
 #创建火箭类对象
 from gameproject.core import rocket
-r=rocket.R(screen,'gameproject\\images\\rocket.png')
+r=rocket.R(screen,'./gameproject/images/rocket.png')
 
 """
 要有子弹，子弹有宽 高 颜色 各种属性，子弹是一个对象，还有方法
@@ -75,7 +75,7 @@ import gameproject.core.enemy as ey
 from pygame.sprite import Group
 es=Group() #创建一个存储敌人的精灵组
 for i in range(st.enemy_num[0]): #创建敌人
-    e = ey.E(screen,'gameproject\\images\\monster.png')
+    e = ey.E(screen,'./gameproject//images//monster.png')
     es.add(e)
 
 
@@ -87,12 +87,12 @@ for i in range(st.enemy_num[0]): #创建敌人
 或在设置文字font时把None(默认)改成中文'simsunnsimsun'
 """
 #三个界面
-bg1 = begin.Beginpage('gameproject\\images\\bg1.jpg',screen)  # 开始界面背景
-bg2 = begin.Beginpage('gameproject\\images\\go.png',screen)  # 开始界面前景图
-background = begin.Beginpage('gameproject\\images\\bg.jpg',screen)  # 射击界面背景1
-background1= begin.Beginpage('gameproject\\images\\bg0.jpg',screen) # 射击界面背景2
-bg3 = end.Endpage('gameproject\\images\\bg2.jpeg',screen)  # 结束界面背景
-bg4 = end.Endpage('gameproject\\images\\2019.png',screen)  # 结束界面前景图
+bg1 = begin.Beginpage('./gameproject/images/bg1.jpg',screen)  # 开始界面背景
+bg2 = begin.Beginpage('./gameproject/images/go.png',screen)  # 开始界面前景图
+background = begin.Beginpage('./gameproject/images/bg.jpg',screen)  # 射击界面背景1
+background1= begin.Beginpage('./gameproject/images/bg0.jpg',screen) # 射击界面背景2
+bg3 = end.Endpage('./gameproject/images/bg2.jpeg',screen)  # 结束界面背景
+bg4 = end.Endpage('./gameproject/images/2019.png',screen)  # 结束界面前景图
 #显示的游戏文字
 myfont = pygame.font.SysFont(None, 30)  # 开始界面文字
 myfont_text = myfont.render('ENTER GAME', True, (255, 255, 255))  # True：开启抗锯齿 字边缘光滑

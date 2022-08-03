@@ -20,7 +20,7 @@ class B(Sprite):
         """
 
         # 创建图形子弹
-        self.img = pygame.image.load('gameproject\\images\\bullet.png')
+        self.img = pygame.image.load('./gameproject/images/bullet.png')
         self.img = pygame.transform.scale(self.img, (10,10))
         self.rect = self.img.get_rect()  #子弹
         self.length = self.rect.centerx*2 #子弹的长
@@ -32,7 +32,7 @@ class B(Sprite):
 
         #wav音频加载
         #播放是在music()时
-        self.r_sound = pygame.mixer.Sound('gameproject\\media\\gun.wav')
+        self.r_sound = pygame.mixer.Sound('./gameproject/media/gun.wav')
         #mp3音频加载
         #pygame.mixer.music.load('gameproject\\media\\gun.mp3')
 

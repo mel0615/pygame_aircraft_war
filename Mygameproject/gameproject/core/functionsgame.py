@@ -76,7 +76,7 @@ def fun_collide(screen,r,bs,es,s): #碰撞检测函数
     collide = pygame.sprite.groupcollide(bs, es, True, True)  # (组1,组2,1死,2死)
     if any(collide):  #是否为空。只要有内容就为True
         # 碰撞时的音效
-        pygame.mixer.Sound('gameproject\\media\\fire.wav').play()
+        pygame.mixer.Sound('./gameproject/media/fire.wav').play()
         # 碰撞的图片效果
         '''
         img = pygame.image.load('gameproject\\images\\boom.png')
@@ -95,7 +95,7 @@ def fun_collide(screen,r,bs,es,s): #碰撞检测函数
         if st.round_flag==1: #进入第二关
             st.round_flag=2
             for i in range(st.enemy_num[st.round_flag-1]):  # 创建第二关的敌人
-                e = ey.E(screen,'gameproject\\images\\chicken.png')
+                e = ey.E(screen,'./gameproject/images/chicken.png')
                 es.add(e)
             #r = rocket.R(screen, 'gameproject\\images\\ghost.png')
         else: #进入结束界面
